@@ -1,0 +1,9 @@
+# Ignore local tooling / non-publish paths
+node_modules/
+*.log
+.DS_Store
+coverage/
+dist/
+dist-registry/
+tsconfig.json
+.npmrc

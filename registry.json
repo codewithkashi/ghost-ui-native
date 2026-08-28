@@ -1,0 +1,299 @@
+{
+  "name": "ghost-ui-native",
+  "homepage": "https://ghost-ui.kashif-dev.site",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [{ "path": "src/lib/utils.ts", "type": "registry:lib", "target": "lib/utils.ts" }]
+    },
+    {
+      "name": "keyboard",
+      "type": "registry:lib",
+      "files": [{ "path": "src/lib/keyboard.ts", "type": "registry:lib", "target": "lib/keyboard.ts" }]
+    },
+    {
+      "name": "theme",
+      "type": "registry:lib",
+      "files": [{ "path": "src/theme/theme.tsx", "type": "registry:lib", "target": "theme/theme.tsx" }]
+    },
+    {
+      "name": "text",
+      "type": "registry:ui",
+      "registryDependencies": ["utils"],
+      "files": [{ "path": "src/components/ui/text.tsx", "type": "registry:ui", "target": "components/ui/text.tsx" }]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "registryDependencies": ["utils"],
+      "dependencies": ["class-variance-authority"],
+      "files": [{ "path": "src/components/ui/button.tsx", "type": "registry:ui", "target": "components/ui/button.tsx" }]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "registryDependencies": ["utils"],
+      "dependencies": ["class-variance-authority"],
+      "files": [{ "path": "src/components/ui/badge.tsx", "type": "registry:ui", "target": "components/ui/badge.tsx" }]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "registryDependencies": ["utils"],
+      "files": [{ "path": "src/components/ui/separator.tsx", "type": "registry:ui", "target": "components/ui/separator.tsx" }]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/card.tsx", "type": "registry:ui", "target": "components/ui/card.tsx" }]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "registryDependencies": ["utils"],
+      "files": [{ "path": "src/components/ui/skeleton.tsx", "type": "registry:ui", "target": "components/ui/skeleton.tsx" }]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/avatar.tsx", "type": "registry:ui", "target": "components/ui/avatar.tsx" }]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "registryDependencies": ["utils"],
+      "files": [{ "path": "src/components/ui/progress.tsx", "type": "registry:ui", "target": "components/ui/progress.tsx" }]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "registryDependencies": ["utils"],
+      "files": [{ "path": "src/components/ui/aspect-ratio.tsx", "type": "registry:ui", "target": "components/ui/aspect-ratio.tsx" }]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "registryDependencies": ["utils", "keyboard", "text", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/input.tsx", "type": "registry:ui", "target": "components/ui/input.tsx" }]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "registryDependencies": ["utils", "keyboard"],
+      "files": [{ "path": "src/components/ui/textarea.tsx", "type": "registry:ui", "target": "components/ui/textarea.tsx" }]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/label.tsx", "type": "registry:ui", "target": "components/ui/label.tsx" }]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/checkbox.tsx", "type": "registry:ui", "target": "components/ui/checkbox.tsx" }]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "registryDependencies": ["theme"],
+      "files": [{ "path": "src/components/ui/switch.tsx", "type": "registry:ui", "target": "components/ui/switch.tsx" }]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/radio-group.tsx", "type": "registry:ui", "target": "components/ui/radio-group.tsx" }]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "registryDependencies": ["utils"],
+      "files": [{ "path": "src/components/ui/slider.tsx", "type": "registry:ui", "target": "components/ui/slider.tsx" }]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/toggle.tsx", "type": "registry:ui", "target": "components/ui/toggle.tsx" }]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/accordion.tsx", "type": "registry:ui", "target": "components/ui/accordion.tsx" }]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/collapsible.tsx", "type": "registry:ui", "target": "components/ui/collapsible.tsx" }]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/tabs.tsx", "type": "registry:ui", "target": "components/ui/tabs.tsx" }]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/dialog.tsx", "type": "registry:ui", "target": "components/ui/dialog.tsx" }]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "registryDependencies": ["dialog", "button"],
+      "files": [{ "path": "src/components/ui/alert-dialog.tsx", "type": "registry:ui", "target": "components/ui/alert-dialog.tsx" }]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/select.tsx", "type": "registry:ui", "target": "components/ui/select.tsx" }]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/sheet.tsx", "type": "registry:ui", "target": "components/ui/sheet.tsx" }]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "dependencies": ["class-variance-authority"],
+      "files": [{ "path": "src/components/ui/alert.tsx", "type": "registry:ui", "target": "components/ui/alert.tsx" }]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/toast.tsx", "type": "registry:ui", "target": "components/ui/toast.tsx" }]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/empty.tsx", "type": "registry:ui", "target": "components/ui/empty.tsx" }]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/breadcrumb.tsx", "type": "registry:ui", "target": "components/ui/breadcrumb.tsx" }]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/pagination.tsx", "type": "registry:ui", "target": "components/ui/pagination.tsx" }]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/popover.tsx", "type": "registry:ui", "target": "components/ui/popover.tsx" }]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/tooltip.tsx", "type": "registry:ui", "target": "components/ui/tooltip.tsx" }]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme", "separator"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/dropdown-menu.tsx", "type": "registry:ui", "target": "components/ui/dropdown-menu.tsx" }]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme"],
+      "dependencies": ["lucide-react-native", "react-native-safe-area-context"],
+      "files": [{ "path": "src/components/ui/drawer.tsx", "type": "registry:ui", "target": "components/ui/drawer.tsx" }]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/input-otp.tsx", "type": "registry:ui", "target": "components/ui/input-otp.tsx" }]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/table.tsx", "type": "registry:ui", "target": "components/ui/table.tsx" }]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "registryDependencies": ["utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/carousel.tsx", "type": "registry:ui", "target": "components/ui/carousel.tsx" }]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "registryDependencies": ["utils", "theme"],
+      "files": [{ "path": "src/components/ui/spinner.tsx", "type": "registry:ui", "target": "components/ui/spinner.tsx" }]
+    },
+    {
+      "name": "bubble",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "dependencies": ["class-variance-authority"],
+      "files": [{ "path": "src/components/ui/bubble.tsx", "type": "registry:ui", "target": "components/ui/bubble.tsx" }]
+    },
+    {
+      "name": "marker",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils"],
+      "files": [{ "path": "src/components/ui/marker.tsx", "type": "registry:ui", "target": "components/ui/marker.tsx" }]
+    },
+    {
+      "name": "message",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "avatar", "bubble"],
+      "dependencies": ["class-variance-authority"],
+      "files": [{ "path": "src/components/ui/message.tsx", "type": "registry:ui", "target": "components/ui/message.tsx" }]
+    },
+    {
+      "name": "message-scroller",
+      "type": "registry:ui",
+      "registryDependencies": ["utils"],
+      "dependencies": ["react-native-safe-area-context"],
+      "files": [{ "path": "src/components/ui/message-scroller.tsx", "type": "registry:ui", "target": "components/ui/message-scroller.tsx" }]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "registryDependencies": ["text", "utils", "theme"],
+      "dependencies": ["lucide-react-native"],
+      "files": [{ "path": "src/components/ui/calendar.tsx", "type": "registry:ui", "target": "components/ui/calendar.tsx" }]
+    },
+    {
+      "name": "provider",
+      "type": "registry:ui",
+      "registryDependencies": ["theme", "toast"],
+      "files": [{ "path": "src/providers/ghost-ui-provider.tsx", "type": "registry:ui", "target": "components/ghost-ui-provider.tsx" }]
+    }
+  ]
+}
