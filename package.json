@@ -1,6 +1,6 @@
 {
   "name": "ghost-ui-native",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Ghost UI — React Native components with NativeWind, theming, and a source-install CLI.",
   "license": "MIT",
   "author": {

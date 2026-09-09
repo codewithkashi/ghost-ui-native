@@ -12,12 +12,9 @@ export function detectProject(cwd) {
 
   const pkg = readJson(pkgPath);
   const deps = { ...pkg.dependencies, ...pkg.devDependencies };
-  const isExpo = Boolean(
-    deps.expo ||
-      exists(path.join(cwd, 'app.json')) ||
-      exists(path.join(cwd, 'app.config.js')) ||
-      exists(path.join(cwd, 'app.config.ts'))
-  );
+  // Bare RN templates also ship app.json — only treat as Expo when the
+  // expo package is present, or app config actually contains an "expo" key.
+  const isExpo = Boolean(deps.expo || hasExpoAppConfig(cwd));
   const isRN = Boolean(deps['react-native']);
   const typescript = Boolean(
     deps.typescript ||
@@ -39,6 +36,22 @@ export function detectProject(cwd) {
     pkgPath,
     deps,
   };
+}
+
+function hasExpoAppConfig(cwd) {
+  const appJsonPath = path.join(cwd, 'app.json');
+  if (exists(appJsonPath)) {
+    try {
+      const appJson = readJson(appJsonPath);
+      if (appJson?.expo) return true;
+    } catch {
+      // ignore invalid json
+    }
+  }
+
+  // app.config.js/ts are commonly Expo-only; still require expo dep when present
+  // so bare RN projects with a similarly named file are not misclassified.
+  return false;
 }
 
 function detectPackageManager(cwd) {
