@@ -5,6 +5,11 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+/** Absolute path to ghost-ui-native package root */
+export const PACKAGE_ROOT = path.resolve(__dirname, '../..');
+export const REGISTRY_PATH = path.join(PACKAGE_ROOT, 'registry.json');
+export const SRC_ROOT = path.join(PACKAGE_ROOT, 'src');
+
 export function exists(p) {
   return fs.existsSync(p);
 }
